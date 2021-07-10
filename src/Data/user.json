@@ -1,4 +1,3 @@
-[
     {
       "name": "Jacques Gluke",
       "tag": "jgluke",
@@ -9,16 +8,5 @@
         "views": 4827,
         "likes": 1308
       }
-    },
-    {
-      "name": "Joe Jones",
-      "tag": "jjones",
-      "location": "Ocho Rios, USA",
-      "avatar": "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg",
-      "stats": {
-        "followers": 7573,
-        "views": 5827,
-        "likes": 2308
-      }
-    }
-]
+    }    
+
