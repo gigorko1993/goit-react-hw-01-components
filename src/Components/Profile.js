@@ -1,12 +1,12 @@
-import User from "../Components/User";
+import ProfileItem from "../Components/ProfileItem";
 
-const UserList = ({ items }) => {
+const Profile = ({ items }) => {
   return (
     <ul>
       {items.map((item) => {
         return (
           <li>
-            <User
+            <ProfileItem
               name={item.name}
               tag={item.tag}
               location={item.location}
@@ -21,4 +21,4 @@ const UserList = ({ items }) => {
     </ul>
   );
 };
-export default UserList;
+export default Profile;
