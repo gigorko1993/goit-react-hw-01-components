@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const ProfileItem = ({
   avatar,
   name,
@@ -34,14 +36,14 @@ const ProfileItem = ({
   );
 };
 
-// User.propTypes = {
-//     avatar = PropTypes.string,
-//     name = PropTypes.string,
-//     tag = PropTypes.string,
-//     location = PropTypes.string,
-//     followers = PropTypes.number,
-//     likes = PropTypes.number,
-//     views = PropTypes.number,
-// };
+ProfileItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  followers: PropTypes.number,
+  likes: PropTypes.number,
+  views: PropTypes.number,
+};
 
 export default ProfileItem;

@@ -1,14 +1,15 @@
-import StatisticsItem from "../Components/StatisticsItem";
+import PropTypes from "prop-types";
 
-const Profile = ({ items }) => {
+const Statistics = ({ stats, title }) => {
   return (
     <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+      {title && <h2 class="title">{title}</h2>}
       <ul class="stat-list">
-        {items.map((item) => {
+        {stats.map(({ id, label, percentage }) => {
           return (
-            <li key={item.id}>
-              <StatisticsItem label={item.label} percentage={item.percentage} />
+            <li class="item" key={id}>
+              <span class="label">{label}</span>
+              <span class="percentage">{percentage}</span>
             </li>
           );
         })}
@@ -16,4 +17,10 @@ const Profile = ({ items }) => {
     </section>
   );
 };
-export default Profile;
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+};
+
+export default Statistics;

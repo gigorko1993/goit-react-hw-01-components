@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div>
       <Profile items={user} />
-      <Statistics items={stat} />
+      <Statistics stats={stat} />
       <FriendList items={friends} />
       <TransactionHistory items={transactions} />
     </div>
