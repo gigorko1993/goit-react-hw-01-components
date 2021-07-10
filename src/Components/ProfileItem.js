@@ -1,4 +1,12 @@
-const User = ({ avatar, name, tag, location, followers, views, likes }) => {
+const ProfileItem = ({
+  avatar,
+  name,
+  tag,
+  location,
+  followers,
+  views,
+  likes,
+}) => {
   return (
     <div class="profile">
       <div class="description">
@@ -36,4 +44,4 @@ const User = ({ avatar, name, tag, location, followers, views, likes }) => {
 //     views = PropTypes.number,
 // };
 
-export default User;
+export default ProfileItem;
