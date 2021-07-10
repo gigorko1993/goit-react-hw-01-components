@@ -1,16 +1,12 @@
-import FriendsListItem from "../Components/FriendsListItem";
-
-const FriendList = ({ items }) => {
+const FriendList = ({ friends }) => {
   return (
     <ul>
-      {items.map((item) => {
+      {friends.map(({ avatar, name, isOnline }) => {
         return (
-          <li>
-            <FriendsListItem
-              name={item.name}
-              avatar={item.avatar}
-              isOnline={item.isOnline}
-            />
+          <li class="item">
+            <span class="status">{isOnline}</span>
+            <img class="avatar" src={avatar} alt={name} width="48" />
+            <p class="name">{name}</p>
           </li>
         );
       })}
