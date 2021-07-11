@@ -28,6 +28,10 @@ const Profile = ({ avatar, name, tag, location, followers, views, likes }) => {
   );
 };
 
+Profile.defaultProps = {
+  avatar: "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg",
+};
+
 Profile.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string,

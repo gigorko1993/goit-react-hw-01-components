@@ -1,4 +1,4 @@
-import TransactionsItem from "../Components/TransactionsItem";
+import PropTypes from "prop-types";
 
 const TransactionHistory = ({ items }) => {
   return (
@@ -11,18 +11,28 @@ const TransactionHistory = ({ items }) => {
         </tr>
       </thead>
       <tbody>
-        {items.map((item) => {
+        {items.map(({ id, type, amount, currency }) => {
           return (
-            <TransactionsItem
-              id={item.id}
-              type={item.type}
-              amount={item.amount}
-              currency={item.currency}
-            />
+            <tr key={id}>
+              <td>{type}</td>
+              <td>{amount}</td>
+              <td>{currency}</td>
+            </tr>
           );
         })}
       </tbody>
     </table>
   );
 };
+
+TransactionHistory.propTypes = {
+  "items[avatar]": PropTypes.string,
+  "items[name]": PropTypes.string,
+  "items[tag]": PropTypes.string,
+  "items[location]": PropTypes.string,
+  "items[followers]": PropTypes.number,
+  "items[likes]": PropTypes.number,
+  "items[views]": PropTypes.number,
+};
+
 export default TransactionHistory;
