@@ -7,21 +7,21 @@ const Profile = ({ avatar, name, tag, location, followers, views, likes }) => {
       <div className={s.description}>
         <img src={avatar} alt="Аватар пользователя" className={s.avatar} />
         <p className={s.name}>{name}</p>
-        {tag ? <p class="tag">@{tag}</p> : <p class="tag">no tag</p>}
-        <p class="location">{location}</p>
+        {tag ? <p>@{tag}</p> : <p>no tag</p>}
+        <p>{location}</p>
       </div>
 
       <ul className={s.stats}>
         <li className={s.thumb}>
-          <span class="label">Followers</span>
+          <span className={s.label}>Followers</span>
           <span className={s.item}>{followers}</span>
         </li>
         <li className={s.thumb}>
-          <span class="label">Views</span>
+          <span className={s.label}>Views</span>
           <span className={s.item}>{views}</span>
         </li>
         <li className={s.thumb}>
-          <span class="label">Likes</span>
+          <span className={s.label}>Likes</span>
           <span className={s.item}>{likes}</span>
         </li>
       </ul>
