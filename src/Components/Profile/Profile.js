@@ -1,27 +1,28 @@
-import PropTypes from "prop-types";
-
+import PropTypes from 'prop-types';
+import s from '../Profile/Profile.module.css';
+console.log(s);
 const Profile = ({ avatar, name, tag, location, followers, views, likes }) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="Аватар пользователя" class="avatar" />
-        <p class="name">{name}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt="Аватар пользователя" className={s.avatar} />
+        <p className={s.name}>{name}</p>
         {tag ? <p class="tag">@{tag}</p> : <p class="tag">no tag</p>}
         <p class="location">{location}</p>
       </div>
 
-      <ul class="stats">
-        <li>
+      <ul className={s.stats}>
+        <li className={s.thumb}>
           <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <span className={s.item}>{followers}</span>
         </li>
-        <li>
+        <li className={s.thumb}>
           <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <span className={s.item}>{views}</span>
         </li>
-        <li>
+        <li className={s.thumb}>
           <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <span className={s.item}>{likes}</span>
         </li>
       </ul>
     </div>
@@ -29,7 +30,7 @@ const Profile = ({ avatar, name, tag, location, followers, views, likes }) => {
 };
 
 Profile.defaultProps = {
-  avatar: "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg",
+  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
 };
 
 Profile.propTypes = {
