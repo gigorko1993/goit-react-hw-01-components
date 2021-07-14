@@ -1,19 +1,16 @@
 import PropTypes from 'prop-types';
-import s from '../Profile/Profile.module.css';
-console.log(s);
+import s from '../FriendList/FriendList.module.css';
+import React from 'react';
+import image from '../FriendList/logo192.png';
 
-const FriendsListItem = ({ avatar, name, isOnline }) => {
+const FriendsListItem = ({ avatar = image, name, isOnline }) => {
   return (
-    <li class="item">
-      <span class="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt={name} width="48" />
-      <p class="name">{name}</p>
+    <li className={s.item}>
+      <span className={isOnline ? s.online : s.offline} />
+      <img className={s.avatar} src={avatar} alt={name} width="48" />
+      <p className={s.name}>{name}</p>
     </li>
   );
-};
-
-FriendsListItem.defaultProps = {
-  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
 };
 
 FriendsListItem.propTypes = {
