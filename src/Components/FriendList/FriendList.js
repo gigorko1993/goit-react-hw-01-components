@@ -1,13 +1,14 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import FriendsListItem from "../Components/FriendsListItem";
+import FriendsListItem from '../FriendList/FriendsListItem';
 
 const FriendList = ({ friends }) => {
   return (
     <ul>
-      {friends.map((friend) => {
+      {friends.map((friend, i) => {
         return (
           <FriendsListItem
+            key={i}
             name={friend.name}
             avatar={friend.avatar}
             isOnline={friend.isOnline}
