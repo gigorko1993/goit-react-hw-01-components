@@ -1,18 +1,30 @@
 import PropTypes from 'prop-types';
 import s from '../Statistics/Statistics.module.css';
-
-console.log(s);
+import makeRandomRGBColor from '../Statistics/colorRandomizer';
 
 const Statistics = ({ stats, title }) => {
+  let statLength = stats.length;
   return (
-    <section class="statistics">
-      {title && <h2 class="title">{title}</h2>}
-      <ul class="stat-list">
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>Title</h2>}
+
+      <ul
+        className={s.stats}
+        style={{
+          gridTemplateColumns: `repeat(${statLength}, 1fr)`,
+        }}
+      >
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li class="item" key={id}>
-              <span class="label">{label}</span>
-              <span class="percentage">{percentage}</span>
+            <li
+              key={id}
+              className={s.thumb}
+              style={{
+                backgroundColor: `${makeRandomRGBColor()}`,
+              }}
+            >
+              <span className={s.label}>{label}</span>
+              <span className={s.item}>{percentage}%</span>
             </li>
           );
         })}
