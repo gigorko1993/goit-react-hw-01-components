@@ -1,4 +1,6 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import s from '../Profile/Profile.module.css';
+console.log(s);
 
 const FriendsListItem = ({ avatar, name, isOnline }) => {
   return (
@@ -11,7 +13,7 @@ const FriendsListItem = ({ avatar, name, isOnline }) => {
 };
 
 FriendsListItem.defaultProps = {
-  avatar: "https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg",
+  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
 };
 
 FriendsListItem.propTypes = {

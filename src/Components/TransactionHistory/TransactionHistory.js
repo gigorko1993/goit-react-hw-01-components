@@ -1,4 +1,7 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import s from '../TransactionHistory/TransactionHistory.module.css';
+
+console.log(s);
 
 const TransactionHistory = ({ items }) => {
   return (
@@ -26,13 +29,13 @@ const TransactionHistory = ({ items }) => {
 };
 
 TransactionHistory.propTypes = {
-  "items[avatar]": PropTypes.string,
-  "items[name]": PropTypes.string,
-  "items[tag]": PropTypes.string,
-  "items[location]": PropTypes.string,
-  "items[followers]": PropTypes.number,
-  "items[likes]": PropTypes.number,
-  "items[views]": PropTypes.number,
+  'items[avatar]': PropTypes.string,
+  'items[name]': PropTypes.string,
+  'items[tag]': PropTypes.string,
+  'items[location]': PropTypes.string,
+  'items[followers]': PropTypes.number,
+  'items[likes]': PropTypes.number,
+  'items[views]': PropTypes.number,
 };
 
 export default TransactionHistory;
